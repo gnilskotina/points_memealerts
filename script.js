@@ -8,8 +8,7 @@ function deleteMeme(e) {
   text.remove(); 
 }
 
-function showMeme(){
-  data = memeList.shift()
+function showMeme(data){
   var meme = document.createElement('video');
   meme.id = 'meme';
   meme.src = data['url'];
@@ -32,11 +31,7 @@ function showMeme(){
   document.getElementById('meme').addEventListener('ended', deleteMeme, false);
 }
 
-async function memeQuery(){
-  if (memeList.length < 2){
-    showMeme()
-  }
-}
+
 
 socket.onopen = function(e) {
   console.log('connect!');
@@ -48,7 +43,7 @@ socket.onmessage = function(event) {
   if (u.hostname == 'cdn.memealerts.com'){
     memeList.push(data);
     console.log('+meme');
-    showMeme();
+    showMeme(data);
   }
   console.log(data);
 };
