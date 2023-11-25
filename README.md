@@ -9,7 +9,7 @@
 `  
 
 ---
-Create a reward with message option. And in descrption i advise paste url `https://memealerts-url-finder.netlify.app/`, it url finder memealerts.  
+Create a reward with message option. And in descrption i advise paste url `https://memealerts-url-finder.netlify.app/`(site not work, memealerts banned all fetch, except their own), it url finder memealerts.  
 
 install lib's
 ```
@@ -18,5 +18,5 @@ pip install websockets
 ```
 First run the `app.py` file, then `bot.py`. After create browser in obs scene and paste `file:///<Index.html file location>`
 ## ▶️Usage
-Use reward with URL meme, find url <a href="https://memealerts-url-finder.netlify.app/">here</a>.
+Use reward with URL meme, url just copy with right click mouse.
 
