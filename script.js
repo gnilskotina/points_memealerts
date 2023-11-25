@@ -20,8 +20,9 @@ function showMeme(){
   user.style.width = 'fit-content';
   user.style.display = 'flex';
   user.style.margin = '0 auto';
+  user.style.marginTop = '15px'
   user.style.color = 'white';
-  user.style.textShadow = '1px 1px 2px #983131, 0 0 1em #2c2c85, 0 0 0.2em #373776';
+  user.style.textShadow = '3px 3px 4px #983131, 0 0 3em #2c2c85, 0 0 0.2em #373776';
   const max = 50;
   meme.style.position = 'absolute';
   meme.style.top = `${Math.floor(Math.random()*(max + 1))}%`;
