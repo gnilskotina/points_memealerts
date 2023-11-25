@@ -1,0 +1,2 @@
+twitchio==2.8.2
+websockets==12.0
