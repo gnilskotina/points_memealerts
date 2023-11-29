@@ -2,6 +2,11 @@ let socket = new WebSocket("ws://localhost:8765");
 
 let memeList = [];
 
+function randomInteger(min, max) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
 function deleteMeme(e) {
   e.target.remove();
   text = document.getElementById('user');
@@ -22,16 +27,17 @@ function showMeme(data){
   user.style.marginTop = '15px'
   user.style.color = 'white';
   user.style.textShadow = '3px 3px 4px #983131, 0 0 3em #2c2c85, 0 0 0.2em #373776';
-  const max = 50;
   meme.style.position = 'absolute';
-  meme.style.top = `${Math.floor(Math.random()*(max + 1))}%`;
-  meme.style.left = `${Math.floor(Math.random()*(max + 1))}%`;
+  meme.addEventListener('loadedmetadata', function(e){
+    const maxH = screen.height - meme.videoHeight;
+    const maxW = screen.width - meme.videoWidth;
+    meme.style.top = `${randomInteger(0,maxH)}px`;
+    meme.style.left = `${randomInteger(0,maxW)}px`;
+});
   document.body.appendChild(meme);
   document.body.appendChild(user);
-  document.getElementById('meme').addEventListener('ended', deleteMeme, false);
+  meme.addEventListener('ended', deleteMeme, false);
 }
-
-
 
 socket.onopen = function(e) {
   console.log('connect!');
