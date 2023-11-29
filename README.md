@@ -1,5 +1,6 @@
-<h1 style="width:fit-content;margin:0 auto;">memealerts.com for twitch point's </h1>
-<h3 style="width:fit-content;margin:0 auto;margin-top:9px">Allows you to use memealerts using Twitch rewards and points.</h3>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F7C75D&random=false&width=435&lines=memealerts+for+twitch+points)](https://git.io/typing-svg)
+---
+<h3 style="margin-top:9px">Allows you to use memealerts using Twitch rewards and points.</h3>  
 
 # ⚙️Setup
 ## 💾Config
