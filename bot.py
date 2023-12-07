@@ -20,10 +20,8 @@ class Bot(commands.Bot):
         print(f'User id is | {self.user_id}')
 
     async def event_message(self,ctx):
-        print(ctx.tags)
         try:
             if ctx.tags['custom-reward-id'] == REWARD:
-                print(ctx.content)
                 data = {
                     'name': ctx.tags['display-name'],
                     'url': ctx.content
@@ -32,8 +30,6 @@ class Bot(commands.Bot):
         except:
             return
     
-    print('2')
-
 
 bot = Bot()
 bot.run()

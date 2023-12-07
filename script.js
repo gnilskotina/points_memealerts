@@ -23,11 +23,12 @@ function showMeme(data){
   user.innerText = data['name'];
   user.style.width = 'fit-content';
   user.style.display = 'flex';
-  user.style.margin = '0 auto';
+  user.style.marginLeft = '11px';
   user.style.marginTop = '15px'
   user.style.color = 'white';
   user.style.textShadow = '3px 3px 4px #983131, 0 0 3em #2c2c85, 0 0 0.2em #373776';
   meme.style.position = 'absolute';
+  meme.style.transform = `rotate(${randomInteger(-7,7)}deg)`
   meme.addEventListener('loadedmetadata', function(e){
     const maxH = screen.height - meme.videoHeight;
     const maxW = screen.width - meme.videoWidth;
@@ -35,7 +36,7 @@ function showMeme(data){
     meme.style.left = `${randomInteger(0,maxW)}px`;
 });
   document.body.appendChild(meme);
-  document.body.appendChild(user);
+  document.getElementById('nicks').appendChild(user);
   meme.addEventListener('ended', deleteMeme, false);
 }
 
